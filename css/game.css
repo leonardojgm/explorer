@@ -1,0 +1,33 @@
+#gameContainer {
+    position: relative;
+    width: 400px;
+    height: 600px;
+    border: 2px solid #333;
+    background-color: #eaeaea;
+    margin: 50px auto;
+    overflow: hidden;
+}
+
+#player {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #3498db;
+    bottom: 0;
+    left: 185px;
+}
+
+.platform {
+    position: absolute;
+    width: 100px;
+    height: 10px;
+    background-color: #2ecc71;
+}
+
+#score {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 20px;
+    color: #333;
+}
