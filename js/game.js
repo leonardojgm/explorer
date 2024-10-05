@@ -4,6 +4,8 @@ let scoreDisplay = document.getElementById('score');
 let playerX = 753;
 let playerY = 0;
 let playerSpeed = 20;
+let moveLeft = false;
+let moveRight = false;
 let playerJump = false;
 let jumpPower = 10;
 let gravity = 0.5;
@@ -19,7 +21,9 @@ function startGame() {
     playButton.style.display = 'none';
     playerX = 753;
     playerY = 0;
-    playerSpeed = 20;
+    playerSpeed = 15;
+    moveLeft = false;
+    moveRight = false;
     playerJump = false;
     jumpPower = 15;
     gravity = 0.5;
@@ -36,16 +40,28 @@ document.addEventListener('keydown', (e) => {
     if (!gameStarted) return; 
 
     if (e.code === 'ArrowRight') {
-        playerX += playerSpeed;
+        moveRight = true;
     }
 
     if (e.code === 'ArrowLeft') {
-        playerX -= playerSpeed;
+        moveLeft = true;
     }
 
     if (e.code === 'Space' && !playerJump) {
         playerJump = true;
         velocityY = -jumpPower;
+    }
+});
+
+document.addEventListener('keyup', (e) => {
+    // Parar de mover à direita
+    if (e.code === 'ArrowRight') {
+        moveRight = false;
+    }
+
+    // Parar de mover à esquerda
+    if (e.code === 'ArrowLeft') {
+        moveLeft = false;
     }
 });
 
@@ -67,6 +83,14 @@ function generateInitialPlatforms() {
 }
 
 function update() {
+    if (moveRight) {
+        playerX += playerSpeed;
+    }
+
+    if (moveLeft) {
+        playerX -= playerSpeed;
+    }
+
     if (playerJump) {
         playerY -= velocityY;
         velocityY += gravity;
@@ -86,7 +110,6 @@ function update() {
             playerRect.top <= platformRect.bottom &&
             playerRect.right >= platformRect.left &&
             playerRect.left <= platformRect.right &&
-
             velocityY > 0
         ) {
             playerJump = true;
