@@ -77,4 +77,4 @@ menuToggle.addEventListener('click', () => {
     nav.classList.toggle('active');
 });
 
-loadPage('view/home.html');
+loadPage('view/game.html');

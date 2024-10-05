@@ -123,6 +123,12 @@
     max-height: 87vh;
     overflow: auto; 
   }
+
+  .centralize {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
   
   section {
     display: flex;
