@@ -45,15 +45,15 @@ function startGame() {
 document.addEventListener('keydown', (e) => {
     if (!gameStarted) return; 
 
-    if (e.code === 'ArrowRight') {
+    if (e.code === 'ArrowRight' || e.code.toUpperCase() === 'A') {
         moveRight = true;
     }
 
-    if (e.code === 'ArrowLeft') {
+    if (e.code === 'ArrowLeft' || e.code.toUpperCase() === 'S') {
         moveLeft = true;
     }
 
-    if (e.code === 'Space' && !playerJump) {
+    if ((e.code === 'Space' || e.code.toUpperCase() === 'W') && !playerJump) {
         playerJump = true;
         velocityY = -jumpPower;
         actionPlayer = true;
@@ -62,12 +62,12 @@ document.addEventListener('keydown', (e) => {
 
 document.addEventListener('keyup', (e) => {
     // Parar de mover à direita
-    if (e.code === 'ArrowRight') {
+    if (e.code === 'ArrowRight' || e.code.toUpperCase() === 'A') {
         moveRight = false;
     }
 
     // Parar de mover à esquerda
-    if (e.code === 'ArrowLeft') {
+    if (e.code === 'ArrowLeft' || e.code.toUpperCase() === 'S') {
         moveLeft = false;
     }
 });
