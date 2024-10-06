@@ -1,6 +1,6 @@
 .slider {
-  width: 1400px;
-  height: 800px;
+  width: 80vw;
+  height: 81vh;
   overflow: hidden;
   position: relative;
   margin-top: 30px;
@@ -13,9 +13,9 @@
 }
 
 .slide {
-  min-width: 1400px;
+  min-width: 80vw;
   position: relative;
-  height: 800px;
+  height: 81vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -41,7 +41,7 @@
 .img-poppy img {
   position: absolute;
   bottom: 140px;
-  right: 580px;
+  right: 640px;
   width: 250px;
   align-items: center;
   justify-content: center;
@@ -56,24 +56,25 @@
   border-radius: 15px;
   text-align: center;
   margin-right: 80px;
+  margin-bottom: 180px;
   justify-content: center;
   align-items: center;
 }
 
 .img-container {
-  margin-top: -200px;
   margin-right: -510px;
+  margin-bottom: 180px;
   z-index: 10;
 }
 
 .img-container-left {
-  margin-top: -200px;
   margin-left: -680px;
+  margin-bottom: 180px;
   z-index: 10;
 }
 
 .platform {
-  width: 1400px;
+  width: 80vw;
   height: 140px;
   position: absolute;
   bottom: 0;
@@ -164,6 +165,7 @@ button:hover {
 .prev {
   left: 40px;
 }
+
 .next {
   right: 40px;
 }

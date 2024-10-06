@@ -7,7 +7,7 @@
 #gameContainer {
   position: relative;
   width: 80vw;
-  height: 80vh;
+  height: 81vh;
   margin: 30px;
   border: 2px solid #000;
   background-color: #f0f0f0;
@@ -21,6 +21,7 @@
   background-position: center;
   opacity: 0.95;
   z-index: 1;
+  border-radius: 20px;
 }
 
 #score {

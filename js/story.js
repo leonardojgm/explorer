@@ -6,8 +6,8 @@ function moveSlide(direction) {
     currentIndex += direction;
 
     if (currentIndex < 0) currentIndex = totalSlides - 1;
-    
+
     if (currentIndex >= totalSlides) currentIndex = 0;
 
-    slides.style.transform = `translateX(-${currentIndex * 1400}px)`;
+    slides.style.transform = `translateX(-${currentIndex * 80}vw)`;
 }
