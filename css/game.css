@@ -35,7 +35,7 @@
 #result {
     display: flex;
     flex-direction: column;
-    justify-content: center;dw
+    justify-content: center;
     align-items: center;
     z-index: 6;
 }
