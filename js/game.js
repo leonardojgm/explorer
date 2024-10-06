@@ -1,6 +1,8 @@
 let gameContainer = document.getElementById('gameContainer');
 let player = document.getElementById('player');
 let scoreDisplay = document.getElementById('score');
+let gameOverDisplay = document.getElementById('gameOver');
+let playButton = document.getElementById('playButton');
 let playerX = 753;
 let playerY = 0;
 let playerSpeed = 20;
@@ -13,12 +15,16 @@ let velocityY = 0;
 let platforms = [];
 let score = 0;
 let gameStarted = false;
+let actionPlayer = false;
 
 function startGame() {
     gameContainer = document.getElementById('gameContainer');
     player = document.getElementById('player');
     scoreDisplay = document.getElementById('score');
+    gameOverDisplay = document.getElementById('gameOver');
+    playButton = document.getElementById('playButton');
     playButton.style.display = 'none';
+    gameOverDisplay.style.display = 'none';
     playerX = 753;
     playerY = 0;
     playerSpeed = 15;
@@ -28,10 +34,10 @@ function startGame() {
     jumpPower = 15;
     gravity = 0.5;
     velocityY = 0;
-    platforms = [];
     score = 0;
     gameStarted = true;
 
+    clearPlatforms();
     generateInitialPlatforms();
     update();
 }
@@ -50,6 +56,7 @@ document.addEventListener('keydown', (e) => {
     if (e.code === 'Space' && !playerJump) {
         playerJump = true;
         velocityY = -jumpPower;
+        actionPlayer = true;
     }
 });
 
@@ -64,6 +71,14 @@ document.addEventListener('keyup', (e) => {
         moveLeft = false;
     }
 });
+
+function clearPlatforms() {
+    platforms.forEach((platform) => {
+        platform.remove();
+    });
+
+    platforms = [];
+}
 
 function createPlatform(yPosition) {
     const platform = document.createElement('div');
@@ -80,6 +95,14 @@ function generateInitialPlatforms() {
     for (let i = 0; i < 5; i++) {
         createPlatform(i * 120);
     }
+}
+
+function gameOver() {
+    gameStarted = false;
+    actionPlayer = false;
+    gameOverDisplay.textContent = `You Lose. Score: ${score}`;
+    gameOverDisplay.style.display = 'block';
+    playButton.style.display = 'flex';
 }
 
 function update() {
@@ -115,10 +138,10 @@ function update() {
             playerJump = true;
             velocityY = -jumpPower;
             score++;
-
-            scoreDisplay.textContent = `Score: ${score}`;
         }
     });
+
+    scoreDisplay.textContent = `Score: ${score}`;
 
     if (playerX < 0) playerX = 0;
     
@@ -126,6 +149,11 @@ function update() {
 
     player.style.left = `${playerX}px`;
     player.style.bottom = `${playerY}px`;
+
+    if (playerY <= 0 && !playerJump && actionPlayer) {
+        gameOver();
+        return;
+    }
 
     platforms.forEach((platform, index) => {
         const platformY = parseFloat(platform.style.bottom);

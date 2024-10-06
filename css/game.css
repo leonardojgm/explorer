@@ -11,7 +11,20 @@
     align-items: center;
 }
 
+#result {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#gameOver {
+    font-size: 30px;
+}
+
 #playButton {
+    width: 100px;
+    height: 50px;
     font-size: 30px;
     padding: 20px 40px;
     background-color: #3498db;
