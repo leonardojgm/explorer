@@ -111,7 +111,7 @@
   main {
     padding: 0;
     position: relative; 
-    background-image: url('/img/fundo.png');
+    //background-image: url('/img/background.png');
     background-size: cover;
     background-color: rgba(255, 255, 255, 0.8);
     background-blend-mode: lighten;

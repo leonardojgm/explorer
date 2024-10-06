@@ -43,9 +43,7 @@ function startGame() {
 }
 
 document.addEventListener('keydown', (e) => {
-    if (!gameStarted) return; 
-
-    console.log(e.code);
+    if (!gameStarted) return;
 
     if (e.code === 'ArrowLeft' || e.code.toUpperCase() === 'KEYA') {
         moveLeft = true;
@@ -86,6 +84,10 @@ function createPlatform(yPosition) {
     platform.classList.add('platform');
     platform.style.left = `${Math.floor(Math.random() * (gameContainer.offsetWidth - 100))}px`;
     platform.style.bottom = `${yPosition}px`;
+
+    const randomClass = Math.random() < 0.5 ? 'platform_a' : 'platform_b';
+
+    platform.classList.add(randomClass);
 
     gameContainer.appendChild(platform);    
     platforms.push(platform);

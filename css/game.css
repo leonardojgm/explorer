@@ -1,3 +1,9 @@
+:root {
+    --color-text-game-1: #9c9013;
+    --color-text-game-2: #159c13;
+    --color-text-game-3: #bf2419;
+}
+
 #gameContainer {
     position: relative;
     width: 80vw;
@@ -9,6 +15,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url('/img/space.png');
+    background-size: contain;
+    background-position: center;
+    opacity: 0.95;
+}
+
+#score {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 30px;
+    color: var(--color-text-game-2); 
+    font-weight: bold;
 }
 
 #result {
@@ -19,7 +38,9 @@
 }
 
 #gameOver {
-    font-size: 30px;
+    font-size: 40px;
+    color: var(--color-text-game-3); 
+    font-weight: bold;    
 }
 
 #playButton {
@@ -48,23 +69,28 @@
 
 #player {
     position: absolute;
-    width: 30px;
-    height: 30px;
-    background-color: #3498db;
+    width: 60px;
+    height: 100px;
     bottom: 0;
+    background-image: url('/img/groundhog.png');
+    background-size: cover;
+    background-position: center;
 }
 
 .platform {
     position: absolute;
-    width: 100px;
-    height: 10px;
-    background-color: #2ecc71;
+    width: 150px;
+    height: 42px;
 }
 
-#score {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    font-size: 20px;
-    color: #333;
+.platform_a {
+    background-image: url('/img/platform_a.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.platform_b {
+    background-image: url('/img/platform_b.png');
+    background-size: cover;
+    background-position: center;
 }
