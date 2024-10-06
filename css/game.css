@@ -29,7 +29,7 @@
     font-size: 30px;
     color: var(--color-text-game-2); 
     font-weight: bold;
-    z-index: 3;
+    z-index: 4;
 }
 
 #result {
@@ -37,7 +37,7 @@
     flex-direction: column;
     justify-content: center;dw
     align-items: center;
-    z-index: 5;
+    z-index: 6;
 }
 
 #gameOver {
@@ -78,24 +78,52 @@
     background-image: url('/img/groundhog_1.png');
     background-size: cover;
     background-position: center;
-    z-index: 4;
+    z-index: 5;
 }
 
 .platform {
     position: absolute;
     width: 150px;
     height: 42px;
-    z-index: 2;
-}
-
-.platform_a {
+    z-index: 3;
     background-image: url('/img/platform_a.png');
     background-size: cover;
     background-position: center;
 }
 
+.platform_a {
+    background-image: url('/img/platform_a.png');
+}
+
 .platform_b {
     background-image: url('/img/platform_b.png');
-    background-size: cover;
+}
+
+.floating-object {
+    position: absolute;
+    width: 140px;
+    height: 200px;
+    color: red;
+    z-index: 2;
+    background-image: url('/img/planet_a.png');
+    background-size: auto;
     background-position: center;
+}
+
+.object_1 {
+    background-image: url('/img/planet_a.png') !important;
+    width: 140px !important;
+    height: 200px !important;
+}
+
+.object_2 {
+    background-image: url('/img/planet_b.png') !important;
+    width: 110px !important;
+    height: 200px !important;
+}
+
+.object_3 {
+    background-image: url('/img/rocket.png') !important;
+    width: 220px !important;
+    height: 200px !important;
 }

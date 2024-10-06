@@ -19,6 +19,10 @@ let actionPlayer = false;
 let backgroundYPosition = 0;
 let walkingFrame = 1;
 let frameCounter = 0;
+let frequencyPlatforms = 7;
+let frequencyObjects = 10;
+let platformCounter = 0;
+let activeObject = null;
 
 function startGame() {
     gameContainer = document.getElementById('gameContainer');
@@ -40,10 +44,46 @@ function startGame() {
     score = 0;
     gameStarted = true;
     walkingFrame = 1;
+    platformCounter = 0;
 
     clearPlatforms();
     generateInitialPlatforms();
     update();
+}
+
+function createFloatingObject() {
+    const randomClass = `object_${parseInt(Math.random() * 3) + 1}`;
+    const floatingObject = document.createElement('div');
+    const isLeft = Math.random() < 0.5;
+
+    floatingObject.classList.add('floating-object');
+    floatingObject.classList.add(randomClass);
+    floatingObject.style.top = '-200px';
+
+    if (isLeft) {
+        floatingObject.style.left = '0px';
+        floatingObject.style.transform = 'scaleX(1)';
+    } else {
+        floatingObject.style.right = '0px';
+        floatingObject.style.transform = 'scaleX(-1)';
+    }
+
+    gameContainer.appendChild(floatingObject);
+
+    activeObject = floatingObject;
+}
+
+function updateFloatingObject() {
+    if (activeObject) {
+        const currentTop = parseFloat(activeObject.style.top);
+
+        activeObject.style.top = `${currentTop + 2}px`;
+
+        if (currentTop > gameContainer.offsetHeight) {
+            activeObject.remove();
+            activeObject = null;
+        }
+    }
 }
 
 function updatePlayerImage() {
@@ -126,10 +166,18 @@ function createPlatform(yPosition) {
 
     gameContainer.appendChild(platform);    
     platforms.push(platform);
+
+    platformCounter++;
+
+    if (platformCounter >= frequencyObjects && !activeObject) {
+        createFloatingObject();
+
+        platformCounter = 0;
+    }
 }
 
 function generateInitialPlatforms() {
-    for (let i = 0; i < 7; i++) {
+    for (let i = 0; i < frequencyPlatforms; i++) {
         createPlatform(i * 120);
     }
 }
@@ -214,6 +262,7 @@ function update() {
         }
     });
 
+    updateFloatingObject();
     updatePlayerImage();
     scrollBackground();
     requestAnimationFrame(update);
