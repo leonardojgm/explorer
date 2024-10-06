@@ -93,12 +93,44 @@
     background-position: center;
 }
 
-.platform_a {
-    background-image: url('/img/platform_a.png');
+.platform_a_1 {
+    background-image: url('/img/platform_a_1.png');
 }
 
-.platform_b {
-    background-image: url('/img/platform_b.png');
+.platform_a_2 {
+    background-image: url('/img/platform_a_2.png');
+}
+
+.platform_a_3 {
+    background-image: url('/img/platform_a_3.png');
+}
+
+.platform_a_4 {
+    background-image: url('/img/platform_a_4.png');
+}
+
+.platform_a_5 {
+    background-image: url('/img/platform_a_5.png');
+}
+
+.platform_b_1 {
+    background-image: url('/img/platform_b_1.png');
+}
+
+.platform_b_2 {
+    background-image: url('/img/platform_b_2.png');
+}
+
+.platform_b_3 {
+    background-image: url('/img/platform_b_3.png');
+}
+
+.platform_b_4 {
+    background-image: url('/img/platform_b_4.png');
+}
+
+.platform_b_5 {
+    background-image: url('/img/platform_b_5.png');
 }
 
 .floating-object {
@@ -113,20 +145,74 @@
 }
 
 .object_1 {
-    background-image: url('/img/planet_a.png') !important;
+    background-image: url('/img/planet_a_1.png') !important;
     width: 140px !important;
     height: 200px !important;
 }
 
 .object_2 {
-    background-image: url('/img/planet_b.png') !important;
+    background-image: url('/img/planet_b_1.png') !important;
     width: 110px !important;
     height: 200px !important;
 }
 
 .object_3 {
-    background-image: url('/img/rocket.png') !important;
+    background-image: url('/img/rocket_1.png') !important;
     width: 220px !important;
+    height: 200px !important;
+}
+
+.object_4 {
+    background-image: url('/img/planet_a_2.png') !important;
+    width: 140px !important;
+    height: 200px !important;
+}
+
+.object_5 {
+    background-image: url('/img/planet_b_2.png') !important;
+    width: 110px !important;
+    height: 200px !important;
+}
+
+.object_6 {
+    background-image: url('/img/rocket_2.png') !important;
+    width: 220px !important;
+    height: 200px !important;
+}
+
+.object_7 {
+    background-image: url('/img/planet_a_3.png') !important;
+    width: 140px !important;
+    height: 200px !important;
+}
+
+.object_8 {
+    background-image: url('/img/planet_b_3.png') !important;
+    width: 110px !important;
+    height: 200px !important;
+}
+
+.object_9 {
+    background-image: url('/img/planet_a_4.png') !important;
+    width: 140px !important;
+    height: 200px !important;
+}
+
+.object_10 {
+    background-image: url('/img/planet_b_4.png') !important;
+    width: 110px !important;
+    height: 200px !important;
+}
+
+.object_11 {
+    background-image: url('/img/planet_a_5.png') !important;
+    width: 140px !important;
+    height: 200px !important;
+}
+
+.object_12 {
+    background-image: url('/img/planet_b_5.png') !important;
+    width: 110px !important;
     height: 200px !important;
 }
 

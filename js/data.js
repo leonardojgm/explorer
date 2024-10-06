@@ -14,13 +14,13 @@ const facts_pt_br = [
     'Alguns exoplanetas têm climas selvagens, como calor sufocante ou tempestades ácidas! Isso mostra o quão incrível e surpreendente pode ser a diversidade do universo!',
     'O método mais comum para descobrir exoplanetas é chamado de “trânsito”. Isso acontece quando um planeta passa na frente de uma estrela, fazendo com que ela pareça mais escura. É como “desligar” brevemente a luz!',
     'Cerca de 20% dos exoplanetas que encontramos estão na “zona habitável”. Esta é a área onde as condições podem ser ideais para a existência de água líquida. E você sabe, onde há água, pode haver vida!',
-    'On some exoplanets, a day can last weeks or even months! Imagine living in a place like that, with super long days and really short nights!',
+    'Em alguns exoplanetas, um dia pode durar semanas ou até meses! Imagine morar em um lugar assim, com dias super longos e noites bem curtas!',
     'Alguns exoplanetas orbitam mais de uma estrela! Esses mundos especiais são chamados de “planetas circumbinários” e podem ter vistas deslumbrantes de dois sóis no céu!',
     'Telescópios incríveis, como o James Webb, nos ajudarão a aprender muito mais sobre exoplanetas e suas atmosferas. Estamos prestes a descobrir muitos segredos do universo!'
 ]
 const score_en = "Score:";
 const score_pt_br = "Pontuação:";
-const end_game_en = `End Game, ${score_en}`;
+const end_game_en = `Game Over, ${score_en}`;
 const end_game_pt_br = `Fim de Jogo, ${score_pt_br}`;
 const play_en = `Play`;
 const play_pt_br = `Jogar`;

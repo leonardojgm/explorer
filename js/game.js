@@ -94,7 +94,7 @@ function showFactModal() {
 }
 
 function createFloatingObject() {
-    const randomClass = `object_${parseInt(Math.random() * 3) + 1}`;
+    const randomClass = `object_${parseInt(Math.random() * 12) + 1}`;
     const floatingObject = document.createElement('div');
     const isLeft = Math.random() < 0.5;
 
@@ -201,7 +201,8 @@ function createPlatform(yPosition) {
     platform.style.left = `${Math.floor(Math.random() * (gameContainer.offsetWidth - 100))}px`;
     platform.style.bottom = `${yPosition}px`;
 
-    const randomClass = Math.random() < 0.5 ? 'platform_a' : 'platform_b';
+    const randomColor = `${parseInt(Math.random() * 5) + 1}`;
+    const randomClass = Math.random() < 0.5 ? `platform_a_${randomColor}` : `platform_b_${randomColor}`;
 
     platform.classList.add(randomClass);
 
