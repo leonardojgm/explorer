@@ -19,6 +19,7 @@
     background-size: contain;
     background-position: center;
     opacity: 0.95;
+    z-index: 1;
 }
 
 #score {
@@ -28,13 +29,15 @@
     font-size: 30px;
     color: var(--color-text-game-2); 
     font-weight: bold;
+    z-index: 3;
 }
 
 #result {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center;dw
     align-items: center;
+    z-index: 5;
 }
 
 #gameOver {
@@ -72,15 +75,17 @@
     width: 60px;
     height: 100px;
     bottom: 0;
-    background-image: url('/img/groundhog.png');
+    background-image: url('/img/groundhog_1.png');
     background-size: cover;
     background-position: center;
+    z-index: 4;
 }
 
 .platform {
     position: absolute;
     width: 150px;
     height: 42px;
+    z-index: 2;
 }
 
 .platform_a {

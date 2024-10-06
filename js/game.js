@@ -17,6 +17,8 @@ let score = 0;
 let gameStarted = false;
 let actionPlayer = false;
 let backgroundYPosition = 0;
+let walkingFrame = 1;
+let frameCounter = 0;
 
 function startGame() {
     gameContainer = document.getElementById('gameContainer');
@@ -37,11 +39,43 @@ function startGame() {
     velocityY = 0;
     score = 0;
     gameStarted = true;
+    walkingFrame = 1;
 
     clearPlatforms();
     generateInitialPlatforms();
     update();
 }
+
+function updatePlayerImage() {
+    if (playerJump) {
+        player.style.backgroundImage = `url(/img/groundhog_3.png)`;
+        
+        if (moveLeft) {
+            player.style.transform = 'scaleX(-1)';
+        } else {
+            player.style.transform = 'scaleX(1)';
+        }
+    } else {
+        if (moveRight || moveLeft) {
+            frameCounter++;
+
+            if (frameCounter % 10 === 0) {
+                walkingFrame = walkingFrame === 1 ? 2 : 1;
+            }
+
+            player.style.backgroundImage = `url(/img/groundhog_${walkingFrame}.png)`;
+
+            if (moveLeft) {
+                player.style.transform = 'scaleX(-1)';
+            } else {
+                player.style.transform = 'scaleX(1)';
+            }
+        } else {
+            player.style.backgroundImage = `url(/img/groundhog_1.png)`;
+        }
+    }
+}
+
 
 document.addEventListener('keydown', (e) => {
     if (!gameStarted) return;
@@ -180,6 +214,7 @@ function update() {
         }
     });
 
+    updatePlayerImage();
     scrollBackground();
     requestAnimationFrame(update);
 }
