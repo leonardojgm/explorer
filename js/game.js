@@ -45,15 +45,17 @@ function startGame() {
 document.addEventListener('keydown', (e) => {
     if (!gameStarted) return; 
 
-    if (e.code === 'ArrowRight' || e.code.toUpperCase() === 'A') {
-        moveRight = true;
-    }
+    console.log(e.code);
 
-    if (e.code === 'ArrowLeft' || e.code.toUpperCase() === 'S') {
+    if (e.code === 'ArrowLeft' || e.code.toUpperCase() === 'KEYA') {
         moveLeft = true;
     }
 
-    if ((e.code === 'Space' || e.code.toUpperCase() === 'W') && !playerJump) {
+    if (e.code === 'ArrowRight' || e.code.toUpperCase() === 'KEYD') {
+        moveRight = true;
+    }
+
+    if ((e.code === 'Space' || e.code.toUpperCase() === 'KEYW') && !playerJump) {
         playerJump = true;
         velocityY = -jumpPower;
         actionPlayer = true;
@@ -61,14 +63,12 @@ document.addEventListener('keydown', (e) => {
 });
 
 document.addEventListener('keyup', (e) => {
-    // Parar de mover à direita
-    if (e.code === 'ArrowRight' || e.code.toUpperCase() === 'A') {
-        moveRight = false;
+    if (e.code === 'ArrowLeft' || e.code.toUpperCase() === 'KEYA') {
+        moveLeft = false;
     }
 
-    // Parar de mover à esquerda
-    if (e.code === 'ArrowLeft' || e.code.toUpperCase() === 'S') {
-        moveLeft = false;
+    if (e.code === 'ArrowRight' || e.code.toUpperCase() === 'KEYD') {
+        moveRight = false;
     }
 });
 
