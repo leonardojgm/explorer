@@ -16,6 +16,7 @@ let platforms = [];
 let score = 0;
 let gameStarted = false;
 let actionPlayer = false;
+let backgroundYPosition = 0;
 
 function startGame() {
     gameContainer = document.getElementById('gameContainer');
@@ -94,7 +95,7 @@ function createPlatform(yPosition) {
 }
 
 function generateInitialPlatforms() {
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 7; i++) {
         createPlatform(i * 120);
     }
 }
@@ -105,6 +106,15 @@ function gameOver() {
     gameOverDisplay.textContent = `You Lose. Score: ${score}`;
     gameOverDisplay.style.display = 'block';
     playButton.style.display = 'flex';
+}
+
+function scrollBackground() {
+    if (gameStarted)
+    {
+        backgroundYPosition += 1;
+    
+        gameContainer.style.backgroundPosition = `0 ${backgroundYPosition}px`;
+    }
 }
 
 function update() {
@@ -170,5 +180,6 @@ function update() {
         }
     });
 
+    scrollBackground();
     requestAnimationFrame(update);
 }
