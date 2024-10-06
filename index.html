@@ -1,45 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Explorer</title>
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/game.css">
-        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.png">
-    </head>
-    <body>
-        <header>
-            <a href="view/home.html" class="link-home">
-                <div class="logo">
-                    <img src="img/logo.png" alt="Logo do Jogo">
-                    <h1>Explorer</h1>
-                </div>
-            </a>
-            <nav>
-                <ul class="menu">
-                    <li class="item-menu">
-                        <a href="view/game.html" class="main-menu" id="menu-play">Play</a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="flags">
-                <img src="img/flag-br.png" alt="Português do Brasil" class="flag" id="flag-br">
-                <img src="img/flag-us.png" alt="Inglês" class="flag" id="flag-us">
-            </div>
-            <button id="menu-toggle" class="menu-icon">
-                &#9776;
-            </button>
-        </header>
-        <main id="main-content">
-        </main>
-        <footer>
-            <a href="view/about.html" class="link-rodape">© 2024 Explorer</a>
-        </footer>
-        <script src="js/data.js"></script>
-        <script src="js/script.js"></script>
-        <script src="js/menu.js"></script>
-        <script src="js/game.js"></script>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exoplanets</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.png" />
+  </head>
+
+  <body>
+    <header class="logo-container">
+      <nav id="navbar" class="navbar">
+        <a href="../index.html">
+          <img class="logo-img" src="./img/logo.png" alt="logo" />
+          <h1>Nordestelar</h1>
+        </a>
+      </nav>
+      <div class="flags">
+        <img
+          src="./img/flag-br.png"
+          alt="Português do Brasil"
+          class="flag"
+          id="flag-br"
+        />
+        <img src="./img/flag-us.png" alt="Inglês" class="flag" id="flag-us" />
+      </div>
+    </header>
+    <main id="home" class="main-container">
+      <section class="intro-content">
+        <div class="img-container">
+          <img
+            src="./img/spc-intro.png"
+            alt="Combination of illustrations with an astronaut, planets, and a rocket."
+          />
+        </div>
+        <div class="info">
+          <h2 class="title">
+            Welcome to the fascinating universe of
+            <span class="span-title">exoplanets</span>!
+          </h2>
+          <p class="main-text">
+            Embark on an intergalactic journey to discover planets orbiting
+            stars outside our solar system. Learn about their unique
+            characteristics through a mini-game filled with interactive
+            information. Get ready to explore and expand your knowledge!
+          </p>
+          <div class="button-container">
+            <a href="./view/game.html" class="button blue-button">Game</a>
+            <a href="./view/quiz.html" class="button blue-button">Quiz</a>
+            <a href="./view/story.html" class="button blue-button">Story</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <a href="./view/about.html" class="link-rodape">
+        <p>
+          © Nordestelar, 2024. <br />
+          Todos os direitos reservados. <br /><span>Icon by Freepik</span>
+        </p>
+      </a>
+    </footer>
+  </body>
 </html>

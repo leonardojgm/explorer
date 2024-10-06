@@ -1,230 +1,230 @@
 :root {
-    --color-text-game-1: #9c9013;
-    --color-text-game-2: #159c13;
-    --color-text-game-3: #bf2419;
+  --color-text-game-1: #9c9013;
+  --color-text-game-2: #159c13;
+  --color-text-game-3: #bf2419;
 }
 
 #gameContainer {
-    position: relative;
-    width: 80vw;
-    height: 80vh;
-    margin: 30px;
-    border: 2px solid #000;
-    background-color: #f0f0f0;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url('/img/star.png');
-    background-color: var(--color-1);
-    background-size: contain;
-    background-position: center;
-    opacity: 0.95;
-    z-index: 1;
+  position: relative;
+  width: 80vw;
+  height: 80vh;
+  margin: 30px;
+  border: 2px solid #000;
+  background-color: #f0f0f0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("/img/star.png");
+  background-color: var(--color-1);
+  background-size: contain;
+  background-position: center;
+  opacity: 0.95;
+  z-index: 1;
 }
 
 #score {
-    display: none;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    font-size: 30px;
-    color: var(--color-text-game-2); 
-    font-weight: bold;
-    z-index: 4;
+  display: none;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 30px;
+  color: var(--color-text-game-2);
+  font-weight: bold;
+  z-index: 4;
 }
 
 #result {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 6;
 }
 
 #gameOver {
-    font-size: 40px;
-    color: var(--color-text-game-3); 
-    font-weight: bold;    
+  font-size: 40px;
+  color: var(--color-text-game-3);
+  font-weight: bold;
 }
 
 .gameButton {
-    width: 100px;
-    height: 50px;
-    font-size: 30px;
-    padding: 20px 40px;
-    background-color: #3498db;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s;
+  width: 100px;
+  height: 50px;
+  font-size: 30px;
+  padding: 20px 40px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
 }
 
 .playButton:hover {
-    background-color: #2980b9;
+  background-color: #2980b9;
 }
 
 .playButton:focus {
-    outline: none;
+  outline: none;
 }
 
 #player {
-    position: absolute;
-    width: 60px;
-    height: 100px;
-    bottom: 0;
-    background-image: url('/img/groundhog_1.png');
-    background-size: cover;
-    background-position: center;
-    z-index: 5;
+  position: absolute;
+  width: 60px;
+  height: 100px;
+  bottom: 0;
+  background-image: url("/img/groundhog_1.png");
+  background-size: cover;
+  background-position: center;
+  z-index: 5;
 }
 
 .platform {
-    position: absolute;
-    width: 150px;
-    height: 42px;
-    z-index: 3;
-    background-image: url('/img/platform_a.png');
-    background-size: cover;
-    background-position: center;
+  position: absolute;
+  width: 150px;
+  height: 42px;
+  z-index: 3;
+  background-image: url("/img/platform_a.png");
+  background-size: cover;
+  background-position: center;
 }
 
 .platform_a_1 {
-    background-image: url('/img/platform_a_1.png');
+  background-image: url("/img/platform_a_1.png");
 }
 
 .platform_a_2 {
-    background-image: url('/img/platform_a_2.png');
+  background-image: url("/img/platform_a_2.png");
 }
 
 .platform_a_3 {
-    background-image: url('/img/platform_a_3.png');
+  background-image: url("/img/platform_a_3.png");
 }
 
 .platform_a_4 {
-    background-image: url('/img/platform_a_4.png');
+  background-image: url("/img/platform_a_4.png");
 }
 
 .platform_a_5 {
-    background-image: url('/img/platform_a_5.png');
+  background-image: url("/img/platform_a_5.png");
 }
 
 .platform_b_1 {
-    background-image: url('/img/platform_b_1.png');
+  background-image: url("/img/platform_b_1.png");
 }
 
 .platform_b_2 {
-    background-image: url('/img/platform_b_2.png');
+  background-image: url("/img/platform_b_2.png");
 }
 
 .platform_b_3 {
-    background-image: url('/img/platform_b_3.png');
+  background-image: url("/img/platform_b_3.png");
 }
 
 .platform_b_4 {
-    background-image: url('/img/platform_b_4.png');
+  background-image: url("/img/platform_b_4.png");
 }
 
 .platform_b_5 {
-    background-image: url('/img/platform_b_5.png');
+  background-image: url("/img/platform_b_5.png");
 }
 
 .floating-object {
-    position: absolute;
-    width: 140px;
-    height: 200px;
-    color: red;
-    z-index: 2;
-    background-image: url('/img/planet_a.png');
-    background-size: auto;
-    background-position: center;
+  position: absolute;
+  width: 140px;
+  height: 200px;
+  color: red;
+  z-index: 2;
+  background-image: url("/img/planet_a.png");
+  background-size: auto;
+  background-position: center;
 }
 
 .object_1 {
-    background-image: url('/img/planet_a_1.png') !important;
-    width: 140px !important;
-    height: 200px !important;
+  background-image: url("/img/planet_a_1.png") !important;
+  width: 140px !important;
+  height: 200px !important;
 }
 
 .object_2 {
-    background-image: url('/img/planet_b_1.png') !important;
-    width: 110px !important;
-    height: 200px !important;
+  background-image: url("/img/planet_b_1.png") !important;
+  width: 110px !important;
+  height: 200px !important;
 }
 
 .object_3 {
-    background-image: url('/img/rocket_1.png') !important;
-    width: 220px !important;
-    height: 200px !important;
+  background-image: url("/img/rocket_1.png") !important;
+  width: 220px !important;
+  height: 200px !important;
 }
 
 .object_4 {
-    background-image: url('/img/planet_a_2.png') !important;
-    width: 140px !important;
-    height: 200px !important;
+  background-image: url("/img/planet_a_2.png") !important;
+  width: 140px !important;
+  height: 200px !important;
 }
 
 .object_5 {
-    background-image: url('/img/planet_b_2.png') !important;
-    width: 110px !important;
-    height: 200px !important;
+  background-image: url("/img/planet_b_2.png") !important;
+  width: 110px !important;
+  height: 200px !important;
 }
 
 .object_6 {
-    background-image: url('/img/rocket_2.png') !important;
-    width: 220px !important;
-    height: 200px !important;
+  background-image: url("/img/rocket_2.png") !important;
+  width: 220px !important;
+  height: 200px !important;
 }
 
 .object_7 {
-    background-image: url('/img/planet_a_3.png') !important;
-    width: 140px !important;
-    height: 200px !important;
+  background-image: url("/img/planet_a_3.png") !important;
+  width: 140px !important;
+  height: 200px !important;
 }
 
 .object_8 {
-    background-image: url('/img/planet_b_3.png') !important;
-    width: 110px !important;
-    height: 200px !important;
+  background-image: url("/img/planet_b_3.png") !important;
+  width: 110px !important;
+  height: 200px !important;
 }
 
 .object_9 {
-    background-image: url('/img/planet_a_4.png') !important;
-    width: 140px !important;
-    height: 200px !important;
+  background-image: url("/img/planet_a_4.png") !important;
+  width: 140px !important;
+  height: 200px !important;
 }
 
 .object_10 {
-    background-image: url('/img/planet_b_4.png') !important;
-    width: 110px !important;
-    height: 200px !important;
+  background-image: url("/img/planet_b_4.png") !important;
+  width: 110px !important;
+  height: 200px !important;
 }
 
 .object_11 {
-    background-image: url('/img/planet_a_5.png') !important;
-    width: 140px !important;
-    height: 200px !important;
+  background-image: url("/img/planet_a_5.png") !important;
+  width: 140px !important;
+  height: 200px !important;
 }
 
 .object_12 {
-    background-image: url('/img/planet_b_5.png') !important;
-    width: 110px !important;
-    height: 200px !important;
+  background-image: url("/img/planet_b_5.png") !important;
+  width: 110px !important;
+  height: 200px !important;
 }
 
 #factModal {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 6;
-    width: 300px;
-    height: 150px;
-    background-color: #fff;
-    border-radius: 5px;
-    padding: 20px;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 6;
+  width: 300px;
+  height: 150px;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
 }
