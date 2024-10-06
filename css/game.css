@@ -15,7 +15,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('/img/space.png');
+    background-image: url('/img/star.png');
+    background-color: var(--color-1);
     background-size: contain;
     background-position: center;
     opacity: 0.95;
@@ -23,6 +24,7 @@
 }
 
 #score {
+    display: none;
     position: absolute;
     top: 10px;
     left: 10px;
@@ -46,7 +48,7 @@
     font-weight: bold;    
 }
 
-#playButton {
+.gameButton {
     width: 100px;
     height: 50px;
     font-size: 30px;
@@ -62,11 +64,11 @@
     transition: background-color 0.3s;
 }
 
-#playButton:hover {
+.playButton:hover {
     background-color: #2980b9;
 }
 
-#playButton:focus {
+.playButton:focus {
     outline: none;
 }
 
@@ -126,4 +128,17 @@
     background-image: url('/img/rocket.png') !important;
     width: 220px !important;
     height: 200px !important;
+}
+
+#factModal {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 6;
+    width: 300px;
+    height: 150px;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
 }

@@ -3,6 +3,9 @@ let player = document.getElementById('player');
 let scoreDisplay = document.getElementById('score');
 let gameOverDisplay = document.getElementById('gameOver');
 let playButton = document.getElementById('playButton');
+let modal = document.getElementById('factModal');
+let modalContent = document.getElementById('factContent');
+let skipButton = document.getElementById('skipButton');
 let playerX = 753;
 let playerY = 0;
 let playerSpeed = 20;
@@ -14,8 +17,10 @@ let gravity = 0.5;
 let velocityY = 0;
 let platforms = [];
 let score = 0;
+let scoreFact = 10;
 let gameStarted = false;
-let actionPlayer = false;
+let isPaused = false;
+let timeModal = 5000;
 let backgroundYPosition = 0;
 let walkingFrame = 1;
 let frameCounter = 0;
@@ -30,8 +35,11 @@ function startGame() {
     scoreDisplay = document.getElementById('score');
     gameOverDisplay = document.getElementById('gameOver');
     playButton = document.getElementById('playButton');
+    modal = document.getElementById('factModal');
+    modalContent = document.getElementById('factContent');
     playButton.style.display = 'none';
     gameOverDisplay.style.display = 'none';
+    scoreDisplay.style.display = 'block';
     playerX = 753;
     playerY = 0;
     playerSpeed = 15;
@@ -49,6 +57,40 @@ function startGame() {
     clearPlatforms();
     generateInitialPlatforms();
     update();
+}
+
+function showFactModal() {
+    const randomFact = language == 'en' 
+        ? facts_en[Math.floor(Math.random() * facts_en.length)] 
+        : facts_pt_br[Math.floor(Math.random() * facts_pt_br.length)];
+    
+    modalContent.textContent = `"${randomFact}"`;
+    modal.style.display = 'flex';
+
+    isPaused = true;
+
+    let counter = timeModal / 1000;
+    const counterDisplay = document.getElementById('counter');
+    counterDisplay.textContent = `${clossing_in_text} ${counter}`;
+
+    const countdown = setInterval(() => {
+        counter--;
+        counterDisplay.textContent = `${clossing_in_text} ${counter}`;
+
+        if (counter === 0) {
+            clearInterval(countdown);
+
+            modal.style.display = 'none';
+            isPaused = false;
+
+            update();
+        }
+    }, 1000);
+
+    setTimeout(() => {
+        modal.style.display = 'none';
+        isPaused = false;
+    }, timeModal);
 }
 
 function createFloatingObject() {
@@ -131,7 +173,6 @@ document.addEventListener('keydown', (e) => {
     if ((e.code === 'Space' || e.code.toUpperCase() === 'KEYW') && !playerJump) {
         playerJump = true;
         velocityY = -jumpPower;
-        actionPlayer = true;
     }
 });
 
@@ -184,8 +225,7 @@ function generateInitialPlatforms() {
 
 function gameOver() {
     gameStarted = false;
-    actionPlayer = false;
-    gameOverDisplay.textContent = `You Lose. Score: ${score}`;
+    gameOverDisplay.textContent = `${end_game_text} ${score}`;
     gameOverDisplay.style.display = 'block';
     playButton.style.display = 'flex';
 }
@@ -200,6 +240,8 @@ function scrollBackground() {
 }
 
 function update() {
+    if (isPaused) return; 
+
     if (moveRight) {
         playerX += playerSpeed;
     }
@@ -232,10 +274,14 @@ function update() {
             playerJump = true;
             velocityY = -jumpPower;
             score++;
+
+            if (score % scoreFact === 0 && score > 0) {
+                showFactModal();
+            }
         }
     });
 
-    scoreDisplay.textContent = `Score: ${score}`;
+    scoreDisplay.textContent = `${score_text} ${score}`;
 
     if (playerX < 0) playerX = 0;
     
@@ -244,7 +290,7 @@ function update() {
     player.style.left = `${playerX}px`;
     player.style.bottom = `${playerY}px`;
 
-    if (playerY <= 0 && !playerJump && actionPlayer) {
+    if (playerY <= 0 && !playerJump && score > 0) {
         gameOver();
         return;
     }
