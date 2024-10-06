@@ -22,7 +22,5 @@ const score_en = "Score:";
 const score_pt_br = "Pontuação:";
 const end_game_en = `Game Over, ${score_en}`;
 const end_game_pt_br = `Fim de Jogo, ${score_pt_br}`;
-const play_en = `Play`;
-const play_pt_br = `Jogar`;
 const clossing_in_en = `Clossing in:`;
 const clossing_in_pt_br = `Fechando em:`;
