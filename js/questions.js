@@ -21,8 +21,8 @@ let questions = [
   {
     numb: 3,
     question: "How many exoplanets have been confirmed so far?",
-    options: ["More than 1,000", 
-              "More than 3,000", 
+    options: ["approximately 1,000", 
+              "approximately 3,000", 
               "More than 5,000",
               "More than 10,000",
               ],
