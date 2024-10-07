@@ -11,8 +11,6 @@ Developed for: https://www.spaceappschallenge.org/nasa-space-apps-2024/find-a-te
 
 Excalidraw: https://excalidraw.com/#json=zoA-Ast5LZhpbzdr1euTI,og-_O58bQfrSMmxt7ZdB4A
 
-![image](https://github.com/user-attachments/assets/35e50d51-6e09-4118-a7fd-43c0a29b4b39)
-
 # Project Description
 
 This project aims to make learning about exoplanets accessible and fun for children and teenagers. Using an interactive platform, users will be able to explore the universe of exoplanets in a playful and simplified way. The project consists of a mini game, an engaging story, and interactive quizzes, all designed to spark curiosity and promote active learning.
@@ -30,3 +28,5 @@ This project aims to make learning about exoplanets accessible and fun for child
 - **HTML**: Structuring the content of the platform.
 - **CSS**: Styling and visual design of the application.
 - **JavaScript**: Interactivity and logic for the mini game, quizzes, and navigation.
+
+![image](https://github.com/user-attachments/assets/35e50d51-6e09-4118-a7fd-43c0a29b4b39)
