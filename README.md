@@ -1,13 +1,13 @@
-# Explorer
+# Nordestelar: Discovering New Worlds
 
-Participantes:
+Team:
 
 1. Aline Rhanny
 2. Gabriel Henrique Silva
 3. Leonardo José Garcia Maia
 4. Thalita Oliveira
 
-Desenvolvido para https://www.spaceappschallenge.org/nasa-space-apps-2024/find-a-team/nordestelar/
+Developed for: https://www.spaceappschallenge.org/nasa-space-apps-2024/find-a-team/nordestelar/
 
 Excalidraw: https://excalidraw.com/#json=zoA-Ast5LZhpbzdr1euTI,og-_O58bQfrSMmxt7ZdB4A
 
