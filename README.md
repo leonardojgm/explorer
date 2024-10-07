@@ -9,8 +9,6 @@ Team:
 
 Developed for: https://www.spaceappschallenge.org/nasa-space-apps-2024/find-a-team/nordestelar/
 
-Excalidraw: https://excalidraw.com/#json=zoA-Ast5LZhpbzdr1euTI,og-_O58bQfrSMmxt7ZdB4A
-
 # Project Description
 
 This project aims to make learning about exoplanets accessible and fun for children and teenagers. Using an interactive platform, users will be able to explore the universe of exoplanets in a playful and simplified way. The project consists of a mini game, an engaging story, and interactive quizzes, all designed to spark curiosity and promote active learning.
