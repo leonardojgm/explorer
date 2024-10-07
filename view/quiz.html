@@ -1,42 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Exoplanets - Quiz</title>
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.png" />
-  </head>
-  <body>
-    <header class="logo-container">
-      <nav id="navbar" class="navbar">
-        <a href="../index.html">
-          <img class="logo-img" src="../img/logo.png" alt="logo" />
-          <h1>Nordestelar</h1>
-        </a>
-      </nav>
-      <div class="flags">
-        <img
-          src="../img/flag-br.png"
-          alt="Português do Brasil"
-          class="flag"
-          id="flag-br"
-        />
-        <img src="../img/flag-us.png" alt="Inglês" class="flag" id="flag-us" />
-      </div>
-    </header>
-    <main id="home" class="main-container">
-      <div class="content">
-        <h2>Quiz</h2>
-        <p>Exemplo texto</p>
-      </div>
-    </main>
-    <footer class="footer">
-      <a href="./about.html" class="link-rodape">
-        <p>© Nordestelar 2024<br />Todos os direitos reservados. <br><span>Icon by Freepik</span></p>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Exoplanets - Quiz</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/quiz.css" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon.png" />
+</head>
+<body>
+  <header class="logo-container">
+    <nav id="navbar" class="navbar">
+      <a href="../index.html">
+        <img class="logo-img" src="../img/logo.png" alt="logo" />
+        <h1>Nordestelar</h1>
       </a>
-    </footer>
-    <script src="../js/data.js"></script>
-    <script src="../js/script.js"></script>
-  </body>
+    </nav>
+    <div class="flags">
+      <img src="../img/flag-br.png" alt="Português do Brasil" class="flag" id="flag-br" />
+      <img src="../img/flag-us.png" alt="Inglês" class="flag" id="flag-us" />
+    </div>
+  </header>
+  <main id="home" class="main-container">
+    <div id="main">
+      <div class="lesson-header">
+        <div class="lesson-header-container">
+          <div class="lesson-header-close">
+            <button class="lesson-header-close-bnt">
+              <i class="fa-solid fa-xmark" style="color: #6b7f99;"></i>
+            </button>
+            <span>Quiz</span>
+          </div>
+          <div class="lesson-header-middle-section">
+            <div class="lesson-stars">
+              <button class="bnt-stars">
+                <span class="star-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                  <path fill="#FFD43B" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg></span>
+                <span class="star-count">5</span>
+              </button>
+            </div>
+          </div>
+          <div class="progress-wrapper">
+            <i id="prev-question" class="fa-solid fa-chevron-left"></i>
+            <div class="progress-bar-container">
+              <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            <i id="next-question" class="fa-solid fa-chevron-right"></i>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="lesson-page">
+          <div class="question-container">
+            <div class="question">
+              <p>What is an exoplanet?</p>
+            </div>
+            <div class="answer-options">
+          </div>
+        </div>
+      </div>
+      <div class="lesson-footer grey">
+        <div class="lesson-page-option">
+          <button id="check-answer" class="lesson-footer-primary-bnt disable sol-button sol-button-m ">Check</button>
+        </div>
+      </div>
+     </div>
+     <div class="end-screen" style="display: none;">
+      <div class="complete-content">
+        <div class="icon-end-screen">
+          <svg xmlns="http://www.w3.org/2000/svg" height="100px" width="100px" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#14c260" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
+        </div>
+        <div class="text-end-screen">
+          <h1>Congratulations!</h1>
+          <p>You have now officially become an exoplanet explorer!</p>
+        </div>
+          <div class="footer-end-screen"><button id="initial-screen">Finish</button></div>
+      </div>
+     </div>
+  </main>
+  <footer class="footer">
+    <a href="./about.html" class="link-rodape">
+      <p>© Nordestelar 2024<br />All rights reserved. <br><span>Icon by Freepik</span></p>
+    </a>
+  </footer>
+  <script src="../js/data.js"></script>
+  <script src="../js/script.js"></script>
+  <script src="../js/questions.js"></script>
+  <script src="../js/quiz.js"></script>
+</body>
 </html>
