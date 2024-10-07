@@ -7,7 +7,9 @@ const nextButton = document.querySelector("#next-question"); // Seleciona o bot�
 const endScreen = document.querySelector(".end-screen")
 const initialScreenButton = document.querySelector("#initial-screen")
 const header = document.querySelector("header")
-const footer = document.querySelector("footer")
+const footer = document.querySelector(".lesson-footer")
+const progressBar = document.querySelector(".progress-bar"); // Seleciona a barra de progresso
+const progressBarContainer = document.querySelector(".progress-bar-container");
 // Variáveis de controle
 let questionCount = 0; // Contador de perguntas
 let selectedAnswer = ""; // Armazena a resposta selecionada
@@ -101,9 +103,12 @@ function nextQuestion() {
     selectedAnswer = ""; // Limpa a resposta selecionada
   } else {
     quizBox.style.display = "none"
-    header.style.display = "none"
     footer.style.display = "none"
     endScreen.style.display = "block"
+    prevButton.style.display = "none"
+    nextButton.style.display = "none"
+    progressBar.style.display = "none"
+    progressBarContainer.style.display = "none"
   }
 }
 
@@ -127,7 +132,6 @@ function resetQuestion() {
 
 // Função para atualizar a barra de progresso
 function updateProgressBar() {
-  const progressBar = document.querySelector(".progress-bar"); // Seleciona a barra de progresso
   const totalQuestions = questions.length;
   const progressPercentage = ((questionCount + 1) / totalQuestions) * 100; // Calcula a porcentagem de progresso
   progressBar.style.width = `${progressPercentage}%`; // Atualiza a largura da barra de progresso
