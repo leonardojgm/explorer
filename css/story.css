@@ -52,7 +52,7 @@
   bottom: 15rem;
   width: auto;
   height: auto;
-  background-color: #eeeeee1f;
+  background-color: var(--twelve-color);
   color: var(--tertiary-color);
   border: 6px solid var(--nine-color);
   border-radius: 15px;
@@ -80,9 +80,7 @@
   height: 140px;
   position: absolute;
   bottom: 0;
-  right: 0;
-  border-radius: 20% 20% 0 0;
-  background-color: var(--ten-color);
+  right: 0;awd
 }
 
 .text {

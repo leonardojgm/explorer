@@ -33,6 +33,12 @@
   color: var(--color-text-game-2);
   font-weight: bold;
   z-index: 4;
+  padding: 10px;
+  background-color: var(--seven-color);
+  border: 6px solid var(--nine-color);
+  border-radius: 15px;
+  font-weight: bold;
+  opacity: 0.8;
 }
 
 #result {
@@ -44,9 +50,19 @@
 }
 
 #gameOver {
+  display: none;
+  justify-content: center;
+  align-items: center;
   font-size: 40px;
   color: var(--color-text-game-3);
+  width: auto;
+  height: 5rem;
+  padding: 20px;
+  background-color: var(--seven-color);
+  border: 6px solid var(--nine-color);
+  border-radius: 15px;
   font-weight: bold;
+  opacity: 0.8;
 }
 
 .gameButton {
@@ -223,9 +239,14 @@
   justify-content: center;
   align-items: center;
   z-index: 6;
-  width: 300px;
-  height: 150px;
+  font-size: 20px;
+  width: 25rem;
+  height: 15rem;
   background-color: #fff;
-  border-radius: 5px;
   padding: 20px;
+  background-color: var(--seven-color);
+  color: var(--color-text-game-1);
+  border: 6px solid var(--nine-color);
+  border-radius: 15px;
+  opacity: 0.8;
 }

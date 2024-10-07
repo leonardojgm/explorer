@@ -227,7 +227,7 @@ function generateInitialPlatforms() {
 function gameOver() {
     gameStarted = false;
     gameOverDisplay.textContent = `${end_game_text} ${score}`;
-    gameOverDisplay.style.display = 'block';
+    gameOverDisplay.style.display = 'flex';
     playButton.style.display = 'flex';
 }
 
