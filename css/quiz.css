@@ -1,35 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap');
- 
- 
- /* Resete Css */
-* {
-  box-sizing: border-box;
-  padding: 0%;
-  margin: 0%;
+#main-quiz {
+  width: 80vw;
+  height: 81vh;
+  margin: 60px;
 }
 
-body {
-  font-family: "Fira Mono", sans-serif;
-  overflow: hidden;
-}
-
-/* header */
 .lesson-header {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  padding: 32px 37px;
+  padding-bottom: 30px;
   font-size: 18px;
   font-weight: 600;
   line-height: 1.4rem;
 }
 
-
 .lesson-header-container {
   width: 100vw;
 }
-
-/* Botão Fechar */
 
 .lesson-header-close {
   display: flex;
@@ -49,7 +36,6 @@ body {
   font-size: 24px;
 }
 
-  /* secão do meio, contador, icon e barra de progresso */
 .lesson-header-middle-section {
   display: flex;
   flex-direction: column;
@@ -98,10 +84,6 @@ body {
   pointer-events: none;
 }
 
-i {
-  cursor: pointer;
-}
-
 .progress-bar-container {
   width: 648px;
   height: 10px;
@@ -117,15 +99,6 @@ i {
   transition: width 0.4s;
 }
 
-
-/* área das questões */
-main {
-  display: flex;
-  justify-content: center;
-  flex: 1;
-  width: 100vw;
-}
-
 .lesson-page {
   display: flex;
   flex-direction: column;
@@ -133,7 +106,6 @@ main {
   max-width: 552px;
   width: 552px;
   margin: 0 auto;
-  /* background-color: #40af0c; */
 }
 
 .question-container {
@@ -149,7 +121,6 @@ main {
 
 .question p {
   text-align: center;
-  font-family: "Fira Sans", sans-serif;
   font-size: 16px;
   letter-spacing: 0;
   line-height: 1.4;
@@ -210,7 +181,7 @@ main {
   margin-top: auto;
   position: fixed;
   left: 0;
-  bottom: 0;
+  bottom: 5.5rem;
 }
 
 .lesson-footer-primary-bnt:disabled .sol-button:disabled .sol-button-m:disabled {
@@ -240,7 +211,6 @@ main {
 }
 
 .sol-button-m {
-  font-family: "Fira sans", sans-serif;
   font-size: 16px;
   line-height: 1;
   letter-spacing: 0;
@@ -294,13 +264,12 @@ button#check-answer.wrong {
   margin-top: auto;
   position: fixed;
   left: 0;
-  bottom: 0;
+  bottom: 5.5rem;
   border-top: 2px solid #c8d2db;
 }
 
 #initial-screen {
   background-color: #165DD0;
-  font-family: "Fira sans", sans-serif;
   font-size: 16px;
   line-height: 1;
   letter-spacing: 0;
