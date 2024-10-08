@@ -22,8 +22,17 @@
   font-size: 20px;
   background-image: url(../img/star.png);
   background-color: var(--primary-color);
+  animation: moveBackground 30s linear infinite;
 }
 
+@keyframes moveBackground {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -100% -100%;
+    }
+}
 .poppy-container {
   position: absolute;
   bottom: 25rem;
