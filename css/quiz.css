@@ -38,7 +38,7 @@
 }
 
 .progress-bar {
-  background-color: #2AA7FD;
+  background-color: #081166;
   width: 0%;
   height: 100%;
   border-radius: 14px;
@@ -96,7 +96,7 @@
 
 .option.selected {
   background: rgba(20, 158, 242, .1);
-  border-color: #2AA7FD;
+  border-color: #3746d0;
   box-shadow: none;
 }
 
@@ -161,7 +161,7 @@
 }
 
 button#check-answer.active {
-  background-color: #2AA7FD;
+  background-color: #081166;
   color: white;
   cursor: pointer;
 }
@@ -194,7 +194,7 @@ button#check-answer.wrong {
 }
 
 #initial-screen {
-  background-color: #165DD0;
+  background-color: #081166;
   font-size: 16px;
   line-height: 1;
   letter-spacing: 0;
