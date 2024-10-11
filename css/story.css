@@ -19,6 +19,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   background-image: url(../img/star.png);
   background-color: var(--primary-color);
   animation: moveBackground 30s linear infinite;
