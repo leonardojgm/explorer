@@ -114,6 +114,13 @@
   margin-bottom: -1.6rem;
 }
 
+.text-credits {
+  font-size: 1.8rem;
+  display: flex;
+  width: 50rem;
+  padding: 2rem;
+}
+
 button {
   position: absolute;
   display: flex;
@@ -176,6 +183,10 @@ button:hover {
   .img-container-left {
     left: -5rem;
   }
+  
+  .text-credits {
+  width: 36rem;
+}
 }
 
 @media (max-width: 1050px) {
@@ -218,6 +229,11 @@ button:hover {
   font-size: 1.6rem;
   width: 22rem;
 }
+  
+  .text-credits {
+  width: 28rem;
+  font-size: 1.7rem;
+}
 }
 
 @media (max-width: 600px) {
@@ -247,5 +263,14 @@ button:hover {
   .text {
       font-size: 1.5rem;
       width: 20rem;
+  }
+  
+    .credits-title {
+    font-size: 1.9rem;
+  }
+
+  .text-credits {
+    width: 23rem;
+    font-size: 1.6rem;
   }
 }
