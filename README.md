@@ -28,3 +28,5 @@ This project aims to make learning about exoplanets accessible and fun for child
 - **JavaScript**: Interactivity and logic for the mini game, quizzes, and navigation.
 
 ![image](https://github.com/user-attachments/assets/35e50d51-6e09-4118-a7fd-43c0a29b4b39)
+
+![image](https://github.com/user-attachments/assets/9f78b933-8d4c-411a-b644-a80a4eb4ae47)
