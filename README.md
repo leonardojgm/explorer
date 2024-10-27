@@ -27,6 +27,14 @@ This project aims to make learning about exoplanets accessible and fun for child
 - **CSS**: Styling and visual design of the application.
 - **JavaScript**: Interactivity and logic for the mini game, quizzes, and navigation.
 
+![image](https://github.com/user-attachments/assets/e2e263e0-602a-43c5-baa1-b0b0c4447b19)
+
+![image](https://github.com/user-attachments/assets/b1f53251-64ae-421a-bd91-4acd77e8a8ac)
+
+![image](https://github.com/user-attachments/assets/216286c9-b829-4292-8420-4e3359979d8f)
+
+![image](https://github.com/user-attachments/assets/3b65584e-edef-4968-90f5-f4ff05865c38)
+
 ![image](https://github.com/user-attachments/assets/35e50d51-6e09-4118-a7fd-43c0a29b4b39)
 
 ![image](https://github.com/user-attachments/assets/9f78b933-8d4c-411a-b644-a80a4eb4ae47)
